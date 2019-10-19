@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Carbon Footprint</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -10,6 +11,9 @@
     </head>
 
     <body>
+        <br>
+        <header><h2>How Large Is Your Carbon Footprint?</h2></header>
+        <br>
         <div class="container">
             <div id="accordion">
 
@@ -57,6 +61,7 @@
                             <p>On average, how many miles do you travel per day?</p>
                             <form>
                                 <input type="number" name="milesTraveled" value=0>
+<!-- hitting enter when this input is selected restarts the page -->
                             </form>
                         </div>
                     </div>
@@ -73,6 +78,7 @@
                             <p>How many minutes do you shower on average?</p>
                             <form>
                                 <input type="number" name="showerTime" value=0>
+<!-- hitting enter when this input is selected restarts the page -->
                             </form>
                             <hr>
                             <p>Do you usually use hot water?</p>
@@ -101,9 +107,21 @@
                                 <input type="radio" name="question1" value=""> 100%  
                             </form>
                             <hr>
-                            <p>What percentage of lights used are LEDs?</p>
+                            <p>What percent of lights used are LEDs?</p>
                             <form>
-                                <input type="number" name="led" value=0> placeholder
+                                <input type="radio" name="leds"> 0%,
+                                <input type="radio" name="leds"> 25%,
+                                <input type="radio" name="leds"> 50%,
+                                <input type="radio" name="leds"> 75%,
+                                <input type="radio" name="leds"> 100%
+                            </form>
+                            <p>What percent are Fluorescent?</p>
+                            <form>
+                                <input type="radio" name="fluorescent"> 0%
+                                <input type="radio" name="fluorescent"> 25%,
+                                <input type="radio" name="fluorescent"> 50%,
+                                <input type="radio" name="fluorescent"> 75%,
+                                <input type="radio" name="fluorescent"> 100%
                             </form>
                         </div>
                     </div>
@@ -112,11 +130,14 @@
                 <!-- insert new div class="card" here-->
             </div>
         </div>
+        <br>
+        <hr>
+        <br>
         <!-- END OF QUESTION SECTION -->
 
         <!-- Summary Section | hidden until questions are finished -->
-        <div id="placeholderHidden">
-
+        <div id="summary">
+            <h3>Summary</h3>
         </div>
 
     </body>
