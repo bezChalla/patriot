@@ -15,58 +15,95 @@
 
                 <!-- div class="collapse show" has a unique id "EXAMPLE" -->
                 <!-- above div needs to reference the id in the href "#EXAMPLE" -->
+<!-- Waste -->
                 <div class="card">
                     <div class="card-header">
                         <a class="card-link" data-toggle="collapse" href="#collapseOne">
-                            Collapsible Group Item #1
+                            Waste
                         </a>
                     </div>
                     <div id="collapseOne" class="collapse show" data-parent="#accordion">
                         <!-- This is the part that gets hidden. Each new menu needs a unique id following collapseNumber -->
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            <p>How often do you use single use items?</p>
+                            <form>
+                                <input type="radio" name="singleUseItems">Never,
+                                <input type="radio" name="singleUseItems">Almost Never,
+                                <input type="radio" name="singleUseItems">Sometimes,
+                                <input type="radio" name="singleUseItems">Almost Always,
+                                <input type="radio" name="singleUseItems">Always
+                            </form>
                         </div>
                     </div>
                 </div>
-
+<!-- Transportation -->
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-                            Collapsible Group Item #2
+                            Transportation
                         </a>
                     </div>
                     <div id="collapseTwo" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            <p>How do you get to school?</p>
+                            <form>
+                                <input type="radio" name="transport"> Car, 
+                                <input type="radio" name="transport"> Bus, 
+                                <input type="radio" name="transport"> Bike, 
+                                <input type="radio" name="transport"> Scooter, 
+                                <input type="radio" name="transport"> Walking
+                            </form>
+                            <hr>
+                            <p>On average, how many miles do you travel per day?</p>
+                            <form>
+                                <input type="number" name="milesTraveled" value=0>
+                            </form>
                         </div>
                     </div>
                 </div>
-
+<!-- Water Usage -->
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-                            Collapsible Group Item #3
+                            Water
                         </a>
                     </div>
                     <div id="collapseThree" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            <p>How many minutes do you shower on average?</p>
+                            <form>
+                                <input type="number" name="showerTime" value=0>
+                            </form>
+                            <hr>
+                            <p>Do you usually use hot water?</p>
+                            <form>
+                                <input type="radio" name="showerTemp"> Yes, 
+                                <input type="radio" name="showerTemp"> No
+                            </form>
                         </div>
                     </div>
                 </div>
-
+<!-- Energy -->
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed card-link" data-toggle="collapse" href="#placeholder1">
-                            placeholder1
+                            Energy
                         </a>
                     </div>
                     <div id="placeholder1" class="collapse" data-parent="#accordion">
                         <div class="card-body">
-                            <p>Question</p>
+                            <p>What percentage of the day do you have the lights on?</p>
                             <form>
-                                <input type="radio" id="" name="question1" value="" checked> Answer1,  
-                                <input type="radio" id="" name="question1" value=""> Answer2  
+                                <input type="radio" name="question1" value=""> 0%,  
+                                <input type="radio" name="question1" value=""> 25%,  
+                                <input type="radio" name="question1" value=""> 50%,  
+                                <input type="radio" name="question1" value=""> 75%,  
+                                <input type="radio" name="question1" value=""> 100%  
+                            </form>
+                            <hr>
+                            <p>What percentage of lights used are LEDs?</p>
+                            <form>
+                                <input type="number" name="led" value=0> placeholder
                             </form>
                         </div>
                     </div>
@@ -77,7 +114,7 @@
         </div>
         <!-- END OF QUESTION SECTION -->
 
-        <!-- Summary Section | hidden until questions finished -->
+        <!-- Summary Section | hidden until questions are finished -->
         <div id="placeholderHidden">
 
         </div>
