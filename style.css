@@ -1,0 +1,11 @@
+.card {
+    border-color: slategray;
+}
+
+.card-header {
+    background-color: darkgreen;
+}
+
+.card-header a {
+    color: white;
+}
