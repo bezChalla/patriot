@@ -106,15 +106,12 @@ $(document).ready(function(){
 				totalTempScore = (72-tempInput) * 54431;
             }
             
-            // calculate total score and round to nearest whole integer
-			totalScore = Math.round(totalWaterScore + totalTransScore + totalTempScore + energyScore);
-			let formattedScore = totalScore.toLocaleString("en");
-            // console.log(totalScore);
+            
 
-            // diet
-            let dietPrint=0; //food eaten - food eaten at Ikes 
+             //diet
+            let dietPrint=""; //food eaten - food eaten at Ikes 
 
-            let foodCunter=0;// footprint per mean in pounds 
+            let foodCunter="";// footprint per mean in pounds 
             if(document.getElementById("beef").checked){
                 foodCunter =+ 6.1;
             }if(document.getElementById("cheese").checked){
@@ -148,7 +145,10 @@ $(document).ready(function(){
 
             //recycling
 
-
+            // calculate total score and round to nearest whole integer
+			totalScore = Math.round(totalWaterScore + totalTransScore + totalTempScore + energyScore);
+			let formattedScore = totalScore.toLocaleString("en");
+            // console.log(totalScore);
 
 
 
