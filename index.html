@@ -31,12 +31,12 @@
                         <div class="card-body">
                             <p>How often do you use single use items?</p>
                             <form>
-                                <input type="radio" name="singleUseItems" id="optionsRadio1" value="option1">Never,
-                                <input type="radio" name="singleUseItems" id="optionsRadio2" value="option2">Almost Never,
-                                <input type="radio" name="singleUseItems" id="optionsRadio3" value="option3">Sometimes,
-                                <input type="radio" name="singleUseItems" id="optionsRadio4" value="option4">Almost Always,
-                                <input type="radio" name="singleUseItems" id="optionsRadio5" value="option5">Always
-                            </form>
+                                <input type="radio" name="singleUseItems" id="optionsRadio1" value="option1" required>Never,
+                                <input type="radio" name="singleUseItems" id="optionsRadio2" value="option2" required>Almost Never,
+                                <input type="radio" name="singleUseItems" id="optionsRadio3" value="option3" required>Sometimes,
+                                <input type="radio" name="singleUseItems" id="optionsRadio4" value="option4" required>Almost Always,
+                                <input type="radio" name="singleUseItems" id="optionsRadio5" value="option5" required>Always
+                            <!--</form>-->
                         </div>
                     </div>
                 </div>
@@ -50,19 +50,19 @@
                     <div id="collapseTwo" class="collapse" data-parent="#accordion">
                         <div class="card-body">
                             <p>How do you get to school?</p>
-                            <form>
-                                <input type="radio" name="transport" id="optionsRadio6" value="option6"> Car, 
-                                <input type="radio" name="transport" id="optionsRadio7" value="option7"> Bus, 
-                                <input type="radio" name="transport" id="optionsRadio8" value="option8"> Bike, 
-                                <input type="radio" name="transport" id="optionsRadio9" value="option9"> Scooter, 
-                                <input type="radio" name="transport" id="optionsRadio10" value="option10"> Walking
+                            <!--<form>-->
+                                <input type="radio" name="transport" id="optionsRadio6" value="option6" required> Car, 
+                                <input type="radio" name="transport" id="optionsRadio7" value="option7" required> Bus, 
+                                <input type="radio" name="transport" id="optionsRadio8" value="option8" required> Bike, 
+                                <input type="radio" name="transport" id="optionsRadio9" value="option9" required> Scooter, 
+                                <input type="radio" name="transport" id="optionsRadio10" value="option10" required> Walking
                             <!--</form>-->
                             <hr>
                             <p>On average, how many miles do you travel per day?</p>
                             <!--<form>-->
-                                <input type="number" name="milesTraveled" value=0 min=0 maxlength="3">
+                                <input type="number" name="milesTraveled" min=0 maxlength="3" required>
 <!-- hitting enter when this input is selected restarts the page -->
-                            </form>
+                            <!--</form>-->
                         </div>
                     </div>
                 </div>
@@ -76,14 +76,14 @@
                     <div id="collapseThree" class="collapse" data-parent="#accordion">
                         <div class="card-body">
                             <p>How many minutes do you shower on average?</p>
-                            <form>
-                                <input type="number" name="showerTime" value=0 min=0 max=300>
+                            <!--<form>-->
+                                <input type="number" name="showerTime" min=0 max=300 required>
 <!-- hitting enter when this input is selected restarts the page -->
                             <hr>
                             <p>Do you usually use hot water?</p>
-                                <input type="radio" name="showerTemp" id="optionsRadio11" value="option11"> Yes, 
-                                <input type="radio" name="showerTemp" id="optionsRadio12" value="option12"> No
-                            </form>
+                                <input type="radio" name="showerTemp" id="optionsRadio11" value="option11" required> Yes, 
+                                <input type="radio" name="showerTemp" id="optionsRadio12" value="option12" required> No
+                            <!--</form>-->
                         </div>
                     </div>
                 </div>
@@ -97,24 +97,25 @@
                     <div id="placeholder1" class="collapse" data-parent="#accordion">
                         <div class="card-body">
                             <p>What percentage of the day do you have the lights on?</p>
-                            <form>
-                                <input type="radio" name="question1" id="optionsRadio13" value="option13"> 0%,  
-                                <input type="radio" name="question1" id="optionsRadio14" value="option14"> 25%,  
-                                <input type="radio" name="question1" id="optionsRadio15" value="option15"> 50%,  
-                                <input type="radio" name="question1" id="optionsRadio16" value="option16"> 75%,  
-                                <input type="radio" name="question1" id="optionsRadio17" value="option17"> 100%  
+                            <!--<form>-->
+                                <input type="radio" name="question1" id="optionsRadio13" value="option13" required> 0%,  
+                                <input type="radio" name="question1" id="optionsRadio14" value="option14" required> 25%,  
+                                <input type="radio" name="question1" id="optionsRadio15" value="option15" required> 50%,  
+                                <input type="radio" name="question1" id="optionsRadio16" value="option16" required> 75%,  
+                                <input type="radio" name="question1" id="optionsRadio17" value="option17" required> 100%  
                             <!--</form>-->
                             <hr>
                             <p>What type of lights do you most commonly use?</p>
                             <!--<form>-->
-                                <input type="radio" name="lightChoice"> LED 
+                                <input type="radio" name="lightChoice" required> LED 
                                 <span> or </span>
-                                <input type="radio" name="lightChoice"> Fluorescent
-                            </form>
+                                <input type="radio" name="lightChoice" required> Fluorescent
+                            <!--</form>-->
                             
                             <hr>
 
                             <input type="submit" id="finalSubmit" value="Submit Survey">
+                            </form>
                         </div>
                     </div>
                 </div>
