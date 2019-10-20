@@ -6,7 +6,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="./secondhalf.js"></script>
         <link rel="stylesheet" href="style.css" />
     </head>
 
@@ -191,7 +190,7 @@
                             
                             <hr>
 
-                            <input type="submit" id="finalSubmit" value="Submit Survey">
+                            <input type="submit" id="calculate-btn" value="Submit Survey">
                             </form>
                         </div>
                     </div>
@@ -206,11 +205,14 @@
         <!-- END OF QUESTION SECTION -->
 
         <!-- Summary Section | hidden until questions are finished -->
-        <div id="summary">
-            <h3>Summary</h3>
+        <div>
+            <h3 id="summary-header"></h3>
+            <p id="summary"></p>
         </div>
-
+        <script src="script.js"></script>
+        <script src="secondhalf.js"></script>
     </body>
+    
 
 
 </html>
