@@ -19,6 +19,77 @@
 
                 <!-- div class="collapse show" has a unique id "EXAMPLE" -->
                 <!-- above div needs to reference the id in the href "#EXAMPLE" -->
+<!-- Diet -->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseDiet">
+                            Diet
+                        </a>
+                    </div>
+                    <div id="collapseDiet" class="collapse show" data-parent="#accordion">
+                        <!-- This is the part that gets hidden. Each new menu needs a unique id following collapseNumber -->
+                        <div class="card-body">
+                            <form>
+                                <p>Select all the food items you consume on an average day:</p>
+                                <input type="checkbox" name="avgDiet" id="" value="" > Beef,
+                                <input type="checkbox" name="avgDiet" id="" value="" > Cheese,
+                                <input type="checkbox" name="avgDiet" id="" value="" > Pork,
+                                <input type="checkbox" name="avgDiet" id="" value="" > Poultry,
+                                <input type="checkbox" name="avgDiet" id="" value="" > Eggs,
+                                <input type="checkbox" name="avgDiet" id="" value="" > Milk,
+                                <input type="checkbox" name="avgDiet" id="" value="" > Rice,
+                                <input type="checkbox" name="avgDiet" id="" value="" > Legumes,
+                                <input type="checkbox" name="avgDiet" id="" value="" > Carrots,
+                                <input type="checkbox" name="avgDiet" id="" value="" > Potatoes
+
+                                <hr>
+
+                                <p>How often do you eat at Ike's in a week?</p><!-- Days a Week for now-->
+                                <input type="radio" name="ikesFreq" id="" value="" required>0-1 Days,
+                                <input type="radio" name="ikesFreq" id="" value="" required>2-3 Days,
+                                <input type="radio" name="ikesFreq" id="" value="" required>4-6 Days,
+                                <input type="radio" name="ikesFreq" id="" value="" required>7 Days
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                        <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseVol">
+                                Volunteering
+                            </a>
+                        </div>
+                        <div id="collapseVol" class="collapse show" data-parent="#accordion">
+                            <!-- This is the part that gets hidden. Each new menu needs a unique id following collapseNumber -->
+                            <div class="card-body">
+                                    <p>How often do you volunteer at gardens and greenhouses at Mason in an average month?</p>
+                                    <input type="radio" name="volunteer1" id="" value="" required> 0-1 Days,
+                                    <input type="radio" name="volunteer1" id="" value="" required> 2-3 Days,
+                                    <input type="radio" name="volunteer1" id="" value="" required> 4 or more
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Purchasing -->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseBuy">
+                            Purchasing
+                        </a>
+                    </div>
+                    <div id="collapseBuy" class="collapse show" data-parent="#accordion">
+                        <!-- This is the part that gets hidden. Each new menu needs a unique id following collapseNumber -->
+                        <div class="card-body">
+                                <p>What percentage of the products you buy are durable, sustainable, organic and Fair-Trade goods?</p>
+                                <input type="radio" name="purchasing1" id="" value="" required> 0%,
+                                <input type="radio" name="purchasing1" id="" value="" required> 25%,
+                                <input type="radio" name="purchasing1" id="" value="" required> 50%,
+                                <input type="radio" name="purchasing1" id="" value="" required> 75%,
+                                <input type="radio" name="purchasing1" id="" value="" required> 100%
+                        </div>
+                    </div>
+                </div>
+
 <!-- Waste -->
                 <div class="card">
                     <div class="card-header">
@@ -30,7 +101,6 @@
                         <!-- This is the part that gets hidden. Each new menu needs a unique id following collapseNumber -->
                         <div class="card-body">
                             <p>How often do you use single use items?</p>
-                            <form>
                                 <input type="radio" name="singleUseItems" id="optionsRadio1" value="option1" required>Never,
                                 <input type="radio" name="singleUseItems" id="optionsRadio2" value="option2" required>Almost Never,
                                 <input type="radio" name="singleUseItems" id="optionsRadio3" value="option3" required>Sometimes,
@@ -42,7 +112,7 @@
                                 <input type="radio" name="recycle" id="" value="" required> 25%,
                                 <input type="radio" name="recycle" id="" value="" required> 50%,
                                 <input type="radio" name="recycle" id="" value="" required> 75%,
-                                <input type="radio" name="recycle" id="" value="" required> 100%,
+                                <input type="radio" name="recycle" id="" value="" required> 100%
                         </div>
                     </div>
                 </div>
@@ -94,11 +164,11 @@
 <!-- Energy -->
                 <div class="card">
                     <div class="card-header">
-                        <a class="collapsed card-link" data-toggle="collapse" href="#placeholder1">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseEnergy">
                             Energy
                         </a>
                     </div>
-                    <div id="placeholder1" class="collapse" data-parent="#accordion">
+                    <div id="collapseEnergy" class="collapse" data-parent="#accordion">
                         <div class="card-body">
                             <p>What percentage of the day do you have the lights on?</p>
                             
@@ -114,6 +184,9 @@
                             <input type="radio" name="lightChoice" id="optionsRadio18" value="option18" required> LED 
                             <span> or </span>
                             <input type="radio" name="lightChoice" id="optionsRadio19" value="option19" required> Fluorescent
+                            <hr>
+                            <p>What is your average thermostat temperature setting?</p>
+                            <input type="number" name="thermSetting" id="" min="0" required> <!-- No Value for Text inputs-->
                             </form>
                             
                             <hr>
