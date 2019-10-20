@@ -21,13 +21,16 @@ $(document).ready(function(){
             //get input values
             let milesInput = document.getElementById("miles").nodeValue;
             let showMinInput = document.getElementById("showMin").nodeValue;
+            let tempInput = document.getElementById("temp").nodeValue;
             
             //set variables for calculating each component score
             let wasteScore = "";
             let transScore = "";
             let waterScore = "";
             let energyScore = "";
-            let thermoScore = "";
+            let totalTransScore = "";
+            let totalWaterScore = "";
+            let totalTempScore = "";
 
             let totalScore = "";
 
@@ -79,7 +82,39 @@ $(document).ready(function(){
 				energyScore = 33800;
 			}else if (document.getElementById("optionsRadio17").checked && document.getElementById("optionsRadio19").checked) {
 				energyScore = 52320;
+            }
+            
+            //console.log("Aluminum and tin score is: " + alumTinScore);
+
+			if (milesInput === 0 || electricInput === "undefined") {
+				toatalTransScore = 0;
+			} else {
+				totalTransScore = transInput * transScore;
 			}
+			// console.log("Electric score is: " + electricScore);
+
+			if (showMinInput === 0 || gasInput === "undefined") {
+				totalWaterScore = 0;
+			} else {
+				totalWaterScore = waterInput * 204;
+			}
+			// console.log("Gas score is: " + gasScore);
+
+			if (tempInput === 0 || tempInput === "undefined") {
+				totalTempScore = 0;
+			} else {
+				totalTempScore = (72-tempInput) * 54431;
+            }
+            
+            // calculate total score and round to nearest whole integer
+			totalScore = Math.round(totalWaterScore + totalTransScore + totalTempScore);
+			let formattedScore = totalScore.toLocaleString("en");
+            // console.log(totalScore);
+            
+            document.getElementById("summery").innerHTML = formattedScore;
+
+			// display results
+			$("#results").show();
         }
     });
 
