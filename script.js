@@ -13,7 +13,7 @@ $(document).ready(function(){
     });
 
     $("#calculate-btn").on("click", function() {
-        let calculateAndDisplayScore = function() {
+        // let calculateAndDisplayScore = function() {
             window.scrollTo(0,400);
             //hide form template if all inputs are completed
             $("#form").hide();
@@ -86,17 +86,17 @@ $(document).ready(function(){
             
             //console.log("Aluminum and tin score is: " + alumTinScore);
 
-			if (milesInput === 0 || electricInput === "undefined") {
+			if (milesInput === 0 || milesInput === "undefined") {
 				toatalTransScore = 0;
 			} else {
-				totalTransScore = transInput * transScore;
+				totalTransScore = milesInput * transScore;
 			}
 			// console.log("Electric score is: " + electricScore);
 
-			if (showMinInput === 0 || gasInput === "undefined") {
+			if (showMinInput === 0 || showMinInput === "undefined") {
 				totalWaterScore = 0;
 			} else {
-				totalWaterScore = waterInput * 204;
+				totalWaterScore = showMinInput * 204;
 			}
 			// console.log("Gas score is: " + gasScore);
 
@@ -107,15 +107,57 @@ $(document).ready(function(){
             }
             
             // calculate total score and round to nearest whole integer
-			totalScore = Math.round(totalWaterScore + totalTransScore + totalTempScore);
+			totalScore = Math.round(totalWaterScore + totalTransScore + totalTempScore + energyScore);
 			let formattedScore = totalScore.toLocaleString("en");
             // console.log(totalScore);
+
+            // diet
+            let dietPrint=0; //food eaten - food eaten at Ikes 
+
+            let foodCunter=0;// footprint per mean in pounds 
+            if(document.getElementById("beef").checked){
+                foodCunter =+ 6.1;
+            }if(document.getElementById("cheese").checked){
+                foodCunter =+ 2.45;
+            }if(document.getElementById("pork").checked){
+                foodCunter =+ 1.72;
+            }if(document.getElementById("poultry").checked){
+                foodCunter =+ 1.76;
+            }if(document.getElementById("eggs").checked){
+                foodCunter=+ .89;
+            }if(document.getElementById("milk").checked){
+                foodCunter =+ .72;
+            }if(document.getElementById("rice").checked){
+                foodCunter =+ .16;
+            }if(document.getElementById("legumes").checked){
+                foodCunter =+ .11;
+            }if(document.getElementById("carrosts").checked){
+                foodCunter =+ .07;
+            }if(document.getElementById("potatos").checked){
+                foodCunter =+ .03;
+            }
+
+            //convert footprint per serving to footprint per year 
+            let mealAYear= 1095;
+            dietPrint= mealAYear * foodCunter;
+            //subtracting what is eaten at Ikes cuz local food save 7%
+            if(document.getElementById("ikeYes").checked){
+            let dietReduce= dietPrint * .07;
+            dietPrint= dietPrint-dietReduce;
+            }
+
+            //recycling
+
+
+
+
+
             
             document.getElementById("summary").innerHTML = formattedScore;
 
 			// display results
 			$("#results").show();
-        }
+        // }
     });
 
 });
