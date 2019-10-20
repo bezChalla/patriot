@@ -19,10 +19,46 @@ $ (document).ready(function(){
             $("#form").hide();
 
             //get input values
-            let input1 = document.getElementById("collapseOne").nodeValue;
-            let input2 = document.getElementById("collapseTwo").nodeValue;
-            let input3 = document.getElementById("collapseThree").nodeValue;
-            let input4 = document.getElementById("collapseOne").nodeValue;
+            let milesInput = document.getElementById("miles").nodeValue;
+            let showMinInput = document.getElementById("showMin").nodeValue;
+            
+            //set variables for calculating each component score
+            let wasteScore = "";
+            let transScore = "";
+            let waterScore = "";
+            let energyScore = "";
+
+            let totalScore = "";
+
+            if (document.getElementById("optionsRadio1").checked) {
+				wasteScore = 0;
+			} else if (document.getElementById("optionsRadio2").checked) {
+				wasteScore = 184;
+			} else if (document.getElementById("optionsRadio3").checked) {
+				wasteScore = 184;
+			}else if (document.getElementById("optionsRadio4").checked) {
+				wasteScore = 184;
+			}else (document.getElementById("optionsRadio5").checked) {
+				wasteScore = 184;
+            }
+            
+            if (document.getElementById("optionsRadio6").checked) {
+				transScore = 400;
+			} else if (document.getElementById("optionsRadio7").checked) {
+				transScore = 0;
+			} else if (document.getElementById("optionsRadio8").checked) {
+				transScore = 22;
+			}else if (document.getElementById("optionsRadio9").checked) {
+				transScore = 200;
+			}else (document.getElementById("optionsRadio10").checked) {
+				transScore = 100;
+            }
+            
+            if (document.getElementById("optionsRadio11").checked) {
+				waterScore = 204;
+			}else (document.getElementById("optionsRadio12").checked) {
+				waterScore = 0;
+			}
         }
     }
 
