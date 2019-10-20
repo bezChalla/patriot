@@ -111,7 +111,7 @@ $(document).ready(function(){
 			let formattedScore = totalScore.toLocaleString("en");
             // console.log(totalScore);
             
-            document.getElementById("summery").innerHTML = formattedScore;
+            document.getElementById("summary").innerHTML = formattedScore;
 
 			// display results
 			$("#results").show();
