@@ -118,23 +118,23 @@ $(document).ready(function(){
             if(document.getElementById("beef").checked){
                 foodCunter =+ 6.1;
             }if(document.getElementById("cheese").checked){
-                foodCunter =+ 2.45;
+                foodCunter += 2.45;
             }if(document.getElementById("pork").checked){
-                foodCunter =+ 1.72;
+                foodCunter += 1.72;
             }if(document.getElementById("poultry").checked){
-                foodCunter =+ 1.76;
+                foodCunter += 1.76;
             }if(document.getElementById("eggs").checked){
-                foodCunter=+ .89;
+                foodCunter += .89;
             }if(document.getElementById("milk").checked){
-                foodCunter =+ .72;
+                foodCunter += .72;
             }if(document.getElementById("rice").checked){
-                foodCunter =+ .16;
+                foodCunter += .16;
             }if(document.getElementById("legumes").checked){
-                foodCunter =+ .11;
+                foodCunter += .11;
             }if(document.getElementById("carrosts").checked){
-                foodCunter =+ .07;
+                foodCunter += .07;
             }if(document.getElementById("potatos").checked){
-                foodCunter =+ .03;
+                foodCunter += .03;
             }
 
             //convert footprint per serving to footprint per year 
