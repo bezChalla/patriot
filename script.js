@@ -1,4 +1,4 @@
-$ (document).ready(function(){
+$(document).ready(function(){
     //hide results template and error alerts on initial page load
     $("#results").hide();
     $(".alert").hide();
@@ -27,6 +27,7 @@ $ (document).ready(function(){
             let transScore = "";
             let waterScore = "";
             let energyScore = "";
+            let thermoScore = "";
 
             let totalScore = "";
 
@@ -38,7 +39,7 @@ $ (document).ready(function(){
 				wasteScore = 184;
 			}else if (document.getElementById("optionsRadio4").checked) {
 				wasteScore = 184;
-			}else (document.getElementById("optionsRadio5").checked) {
+			}else {
 				wasteScore = 184;
             }
             
@@ -50,13 +51,13 @@ $ (document).ready(function(){
 				transScore = 22;
 			}else if (document.getElementById("optionsRadio9").checked) {
 				transScore = 200;
-			}else (document.getElementById("optionsRadio10").checked) {
+			}else {
 				transScore = 100;
             }
             
             if (document.getElementById("optionsRadio11").checked) {
 				waterScore = 204;
-			}else (document.getElementById("optionsRadio12").checked) {
+			}else {
 				waterScore = 0;
             }
             
@@ -80,6 +81,6 @@ $ (document).ready(function(){
 				energyScore = 52320;
 			}
         }
-    }
+    });
 
-}
+});
