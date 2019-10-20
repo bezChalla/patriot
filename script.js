@@ -19,9 +19,9 @@ $(document).ready(function(){
             $("#form").hide();
 
             //get input values
-            let milesInput = document.getElementById("miles").nodeValue;
-            let showMinInput = document.getElementById("showMin").nodeValue;
-            let tempInput = document.getElementById("temp").nodeValue;
+            let milesInput = document.getElementById("miles").value;
+            let showMinInput = document.getElementById("showMin").value;
+            let tempInput = document.getElementById("temp").value;
             
             //set variables for calculating each component score
             let wasteScore = 0;
@@ -136,7 +136,7 @@ $(document).ready(function(){
 
             //convert footprint per serving to footprint per year 
             let mealAYear= 1095;
-            dietPrint= mealAYear * foodCunter;
+            dietPrint= mealAYear * foodCunter * 454;
             //subtracting what is eaten at Ikes cuz local food save 7%
             if(document.getElementById("ikeYes").checked){
             let dietReduce= dietPrint * .07;
@@ -157,7 +157,7 @@ $(document).ready(function(){
             }
 
             // calculate total score and round to nearest whole integer
-			totalScore = Math.round(totalWaterScore + totalTransScore + totalTempScore + energyScore + dietPrint - reducing);
+			totalScore = Math.round(totalWaterScore + (totalTransScore * 365) + totalTempScore + energyScore + dietPrint - (reducing * 454));
 			let formattedScore = totalScore.toLocaleString("en");
             // console.log(totalScore);
 
