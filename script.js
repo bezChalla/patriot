@@ -58,6 +58,26 @@ $ (document).ready(function(){
 				waterScore = 204;
 			}else (document.getElementById("optionsRadio12").checked) {
 				waterScore = 0;
+            }
+            
+            if(document.getElementById("optionsRadio13").checked) {
+				energyScore = 0;
+			}else if (document.getElementById("optionsRadio14").checked && document.getElementById("optionsRadio18").checked) {
+				energyScore = 8450 ;
+			}else if (document.getElementById("optionsRadio14").checked && document.getElementById("optionsRadio19").checked) {
+				energyScore = 14080;
+			}else if (document.getElementById("optionsRadio15").checked && document.getElementById("optionsRadio18").checked) {
+				energyScore = 16900;
+			}else if (document.getElementById("optionsRadio15").checked && document.getElementById("optionsRadio19").checked) {
+				energyScore = 28160;
+			}else if (document.getElementById("optionsRadio16").checked && document.getElementById("optionsRadio18").checked) {
+				energyScore = 25340;
+			}else if (document.getElementById("optionsRadio16").checked && document.getElementById("optionsRadio19").checked) {
+				energyScore = 42240;
+			}else if (document.getElementById("optionsRadio17").checked && document.getElementById("optionsRadio18").checked) {
+				energyScore = 33800;
+			}else if (document.getElementById("optionsRadio17").checked && document.getElementById("optionsRadio19").checked) {
+				energyScore = 52320;
 			}
         }
     }
